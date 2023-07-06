@@ -26,15 +26,19 @@ languages:
           series: series
         menu:
             main:
-                - name: Search
-                  url: search/
+                - name: Posts
+                  url: posts/
                   weight: 10
                 - name: Archives
                   url: archives/
-                  weight: 10
+                  weight: 20
                 - name: Tags
                   url: tags/
-                  weight: 10
+                  weight: 30
+                - name: Search
+                  url: search/
+                  weight: 40
+
 outputs:
     home:
         - HTML
@@ -49,7 +53,7 @@ params:
 
     defaultTheme: auto
     # disableThemeToggle: true
-    ShowShareButtons: true
+    ShowShareButtons: false
     ShowReadingTime: true
     # disableSpecial1stPost: true
     displayFullLangName: true
@@ -58,6 +62,7 @@ params:
     ShowCodeCopyButtons: true
     ShowRssButtonInSectionTermList: true
     ShowToc: true
+    TocOpen: true
     comments: true
     images: ["papermod-cover.png"]
 
@@ -69,8 +74,8 @@ params:
         # imageWidth: 120
         # imageHeight: 120
         buttons:
-            - name: Archives
-              url: archives
+            - name: Posts
+              url: posts
             - name: Tags
               url: tags
 
@@ -90,7 +95,7 @@ params:
           url: "https://github.com/bookpark"
 
     editPost:
-        URL: "https://github.com/bookpark/bookpark.github.io/content"
+        URL: "https://github.com/bookpark/blog/blob/main/content"
         Text: "Suggest Changes" # edit text
         appendFilePath: true # to append file path to Edit link
 
